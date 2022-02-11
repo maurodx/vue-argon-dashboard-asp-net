@@ -3,6 +3,8 @@
 # install simple http server for serving static content
 RUN npm install -g http-server
 
+RUN apk add --no-cache py3-pip
+
 # make the 'app' folder the current working directory
 WORKDIR /app
 

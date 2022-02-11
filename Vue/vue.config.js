@@ -8,7 +8,14 @@ module.exports = {
       new webpack.optimize.LimitChunkCountPlugin({
         maxChunks: 6
       })
-    ]
+        ],
+        // rest of the webpack config
+        resolve: {
+            // ... rest of the resolve config
+            fallback: {
+                "querystring": require.resolve("querystring-es3")
+            }
+        },
   },
   pwa: {
     name: 'Vue Argon Dashboard',
